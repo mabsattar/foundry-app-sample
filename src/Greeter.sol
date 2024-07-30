@@ -5,7 +5,7 @@ pragma solidity ^0.8.19;
 
 import "forge-std/console.sol";
 
-contnract Greeter {
+contract Greeter {
     string private greeting;
 
     constructor(string memory _greeting) {
