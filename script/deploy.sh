@@ -1,8 +1,13 @@
 #!/bin/bash
 
+# Load environment variables from .env file
+set -o allexport
+source .env
+set +o allexport
+
 # Set up environment variables
-export NODE_URL="http://127.0.0.1:8545" # URL of your local node
-export PRIVATE_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80" # Private key of the deployer account
+export NODE_URL="${NODE_URL}" # URL of your local node
+export PRIVATE_KEY="${PRIVATE_KEY}" # Private key of the deployer account
 export GREETING="Hello, World!" # Example constructor argument
 
 # Diagnostic output to verify variables
